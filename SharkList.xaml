@@ -16,7 +16,22 @@
                     Grid.Column="1" 
                     VerticalOptions="Start"/>
             </Grid>
-
+	    
+	    <ListView x:Name="SharkCellListView">
+	         <ListView.ItemTemplate>
+		     <DataTemplate>
+			 <ViewCell>
+			     <ViewCell.ContextActions>
+			         <MenuItem
+				     Text="{Binding name}"
+				     Clicked="NavigateToWebPage"
+				     CommandParameter="{Binding url}"
+				     Detail="{Binding detail}"	/>
+			     </ViewCell.ContextActions>
+			 </ViewCell>
+		     </DataTemplate>
+		 </Listview.ItemTemplate>
+	    </ListView>
             
         </StackLayout>
 	</ContentPage.Content>
