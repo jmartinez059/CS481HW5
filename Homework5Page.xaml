@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:Homework5" 
     x:Class="Homework5.Homework5Page">
-	  <StackLayout Padding="1">
+      <StackLayout Padding="1">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -11,18 +11,18 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Image Source="sharkLabel.jpg"
+            <Image Source="sharkLabel.jpeg"
                 HeightRequest="75"
                 Grid.Column="1" 
                 VerticalOptions="Start"/>
         </Grid>
 
-        <Label Text="Welcom to" HorizontalTextAlignment="Center"/>
+        <Label Text="Welcome to" HorizontalTextAlignment="Center"/>
         <Label Text="Shark Finder" HorizontalTextAlignment="Center" FontSize="30"/>
 
         <Button
-            Clicked="ButtonEnter"
-            Image="enterButton.jpg"
+            Clicked="Button_Enter"
+            Image="enterButton.jpeg"
             HorizontalOptions="Center"/> 
 
         <Label Text="Enter" HorizontalOptions="Center"/>
