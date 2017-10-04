@@ -17,16 +17,22 @@
                     VerticalOptions="Start"/>
             </Grid>
 	    
-	    <ListView x:Name="SharkCellListView">
+	    <ListView x:Name="SharkCellListView"
+		      IsPullToRefreshEnabled="true"
+		      Refreshing="Handle_Refreshing">
 	         <ListView.ItemTemplate>
 		     <DataTemplate>
-			 <ViewCell>
-			     <ViewCell.ContextActions>
-			         <MenuItem
+			 <ViewCell
 				     Text="{Binding name}"
 				     Clicked="NavigateToWebPage"
 				     CommandParameter="{Binding url}"
-				     Detail="{Binding detail}"	/>
+				     Detail="{Binding detail}">
+			     <ViewCell.ContextActions>
+			         <MenuItem
+				     Text="Delete"
+				     Clicked="Handle_Delete"
+				     CommandParameter="{Binding .}"
+				     IsDestructive="true"/>
 			     </ViewCell.ContextActions>
 			 </ViewCell>
 		     </DataTemplate>
